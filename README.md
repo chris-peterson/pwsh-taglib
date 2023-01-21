@@ -1,2 +1,3 @@
 # pwsh-taglib
-Interact with TagLib# from Powershell
+
+Interact with [TagLib#](https://github.com/mono/taglib-sharp) from Powershell

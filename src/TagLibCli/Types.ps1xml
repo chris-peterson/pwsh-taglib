@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>TagLib.MusicItem</Name>
+    <Members>
+      <ScriptProperty>
+        <Name>Image</Name>
+        <GetScriptBlock>
+            $this.Picture.Data
+        </GetScriptBlock>
+      </ScriptProperty>
+    </Members>
+  </Type>
+</Types>
