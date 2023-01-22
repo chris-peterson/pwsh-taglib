@@ -8,22 +8,12 @@ function New-TagLibCliObject {
         [string]
         $DisplayType
     )
-    Begin{}
-    Process {
+    process {
         foreach ($Item in $InputObject) {
-            $Wrapper = New-Object PSObject
-            $Item.PSObject.Properties |
-                Sort-Object Name |
-                ForEach-Object {
-                    $Wrapper | Add-Member -MemberType NoteProperty -Name $_.Name -Value $_.Value
-                }
-            
-            
             if ($DisplayType) {
-                $Wrapper.PSTypeNames.Insert(0, $DisplayType)
+                $Item.PSTypeNames.Insert(0, $DisplayType)
             }
-            Write-Output $Wrapper
+            Write-Output $Item
         }
     }
-    End{}
 }

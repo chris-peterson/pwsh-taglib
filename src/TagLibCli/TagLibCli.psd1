@@ -1,11 +1,11 @@
 @{
-    ModuleVersion = '0.0.1'
+    ModuleVersion = '0.0.2'
 
     PrivateData = @{
         PSData = @{
             LicenseUri = 'https://github.com/chris-peterson/pwsh-taglib/blob/main/LICENSE'
             ProjectUri = 'https://github.com/chris-peterson/pwsh-taglib'
-            ReleaseNotes = 'initial release'
+            ReleaseNotes = 'add rename'
         }
     }
 
@@ -30,11 +30,12 @@
     FunctionsToExport = @(
         # Music
         'Get-MusicMetadata'
+        'Rename-MusicFile'
 
         # Utilities
         'New-TagLibCliObject'
     )
     AliasesToExport = @(
-        'gmm'
+        'id3'
     )
 }
