@@ -2,6 +2,9 @@
 
 Interact with [TagLib#](https://github.com/mono/taglib-sharp) from Powershell
 
+## Examples
+
+### `Get-MusicMetadata`
 
 ## Status
 

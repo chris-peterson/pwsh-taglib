@@ -1,11 +1,11 @@
 @{
-    ModuleVersion = '0.0.2'
+    ModuleVersion = '0.0.3'
 
     PrivateData = @{
         PSData = @{
             LicenseUri = 'https://github.com/chris-peterson/pwsh-taglib/blob/main/LICENSE'
             ProjectUri = 'https://github.com/chris-peterson/pwsh-taglib'
-            ReleaseNotes = 'add rename'
+            ReleaseNotes = 'more functionality'
         }
     }
 
