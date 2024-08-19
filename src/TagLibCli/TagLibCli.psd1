@@ -1,11 +1,11 @@
 @{
-    ModuleVersion = '0.0.3'
+    ModuleVersion = '0.0.4'
 
     PrivateData = @{
         PSData = @{
             LicenseUri = 'https://github.com/chris-peterson/pwsh-taglib/blob/main/LICENSE'
             ProjectUri = 'https://github.com/chris-peterson/pwsh-taglib'
-            ReleaseNotes = 'more functionality'
+            ReleaseNotes = 'add wrapper type'
         }
     }
 
@@ -13,7 +13,7 @@
 
     Author = 'Chris Peterson'
     CompanyName = 'Chris Peterson'
-    Copyright = '(c) 2023'
+    Copyright = '(c) 2023-2024'
 
     Description = 'Interact with TagLib# via PowerShell'
     PowerShellVersion = '7.1'

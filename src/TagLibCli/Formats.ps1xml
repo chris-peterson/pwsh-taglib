@@ -32,7 +32,7 @@
                 <PropertyName>Track</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>FirstArtist</PropertyName>
+                <PropertyName>Artist</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
                 <PropertyName>Title</PropertyName>

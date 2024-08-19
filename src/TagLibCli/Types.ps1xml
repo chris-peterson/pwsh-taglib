@@ -4,21 +4,51 @@
     <Name>TagLib.MusicItem</Name>
     <Members>
       <ScriptProperty>
-        <Name>Image</Name>
+        <Name>Path</Name>
         <GetScriptBlock>
-            $Cover = $this.Pictures | Select-Object -First 1
+          $this.File.Name
+        </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>Track</Name>
+        <GetScriptBlock>
+          '{0:D2}' -f $this.Tag.Track
+        </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>Artist</Name>
+        <GetScriptBlock>
+          $this.Tag.FirstArtist
+        </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>Title</Name>
+        <GetScriptBlock>
+          $this.Tag.Title
+        </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>Album</Name>
+        <GetScriptBlock>
+          $this.Tag.Album
+        </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>Year</Name>
+        <GetScriptBlock>
+          $this.Tag.Year
+        </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>Thumbnail</Name>
+        <GetScriptBlock>
+            $Cover = $this.Tag.Pictures | Select-Object -First 1
             if ($Cover.MimeType -eq 'image/jpeg') {
               $Bytes = $Cover.Data | Foreach-Object { [byte] $_ }
               $OutFile = [System.IO.Path]::GetTempFileName() -replace '.tmp', '.jpg'
               [System.IO.File]::WriteAllBytes($OutFile, $Bytes)
               open $OutFile
             }
-        </GetScriptBlock>
-      </ScriptProperty>
-      <ScriptProperty>
-        <Name>Artist</Name>
-        <GetScriptBlock>
-          $this.FirstArtist ?? $this.FirstPerformer ?? $this.FirstAlbumArtist
         </GetScriptBlock>
       </ScriptProperty>
     </Members>
