@@ -1,5 +1,8 @@
 # Overview
 
+📖 **[Read the docs →](https://chris-peterson.github.io/pwsh-taglib/)**
+
+
 Interact with [TagLib#](https://github.com/mono/taglib-sharp) from Powershell
 
 ## Examples
