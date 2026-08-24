@@ -91,6 +91,8 @@ function Rename-MusicFile {
                         }
                     }
                     $NewName = $NewNameParts -join ' - '
+                    $NewName = $NewName.Split([IO.Path]::GetInvalidFileNameChars()) -join '_'
+
                     $DestinationPath = "$(Join-Path -Path $Item.Directory.FullName $NewName)$($Item.Extension)"
                     if ($PSCmdlet.ShouldProcess("$($Item.FullName)", "Rename to '$DestinationPath'")) {
                         Move-Item -Path $Item.FullName -Destination $DestinationPath
